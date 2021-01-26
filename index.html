@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume With React</title>
+    <link rel="stylesheet" href="main.css">
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        #main{
+            margin: 0 0;
+        }
+    </style>
+    </head>
+<body>
+    <div id="main">
+
+    </div>
+    <script type="text/babel">
+    const root=document.getElementById("main");
+    const Title = ({name})=><h1 class="text-center">{name}</h1>
+    
+    const Addressbar = ({address,phone,email,website})=>
+    {
+        return(
+            <div class="row text-center">
+                <div class="col">
+                    <p>{address}</p>
+                    <p>{phone}</p>
+                    <p>{email}</p>
+                    <p>{website}</p>
+                    <hr/>
+                </div>
+            </div>
+        ) 
+        
+    }
+   const CarrerObjective=({text}) =>
+   {
+       return(
+           <div class="container">
+                <div class="row"><h3>Carrer Objective</h3></div>
+                 <div class="row">{text}</div>
+                 <hr/>
+            </div>
+       )
+   }
+   const Education=()=>
+   {
+       return(
+        <div class="container">
+        <h3>Education Qualifications</h3>
+        <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Qualification</th>
+                <th>College name</th>
+                <th>Year Of Passing</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>B.E</td>
+                <td>Sathyabama University</td>
+                <td>2020</td>
+                <td>85.9</td>
+            </tr>
+            <tr>
+                <td>Intermediate</td>
+                <td>MPC</td>
+                <td>2016</td>
+                <td>96.6</td>
+                
+            </tr>
+            <tr>
+                <td>Primary School</td>
+                <td>General</td>
+                <td>2014</td>
+                <td>97</td>
+            </tr>
+        </tbody>
+        </table>
+        <hr/>
+    </div>
+       )
+  
+   }
+   const Skills=()=>
+   {
+       return(
+           <div>
+            <h3>Skills</h3>
+           <ul>
+            <li>C</li>
+            <li>JavaScript</li>
+            <li>HTML </li>
+            <li>CSS</li>
+            <li>Linux</li>
+            <li>SQL</li>
+            <li>DBMS</li>
+            </ul>
+            <hr/>
+            </div>
+       )
+   }
+   const Projects=()=>
+   {
+       return(
+           <div>
+            <h3>Projects</h3>
+           <ol>
+            <li>Sign Language Application</li>
+            <li>Text Encoder and Decoder</li>
+            <li>Software Defect ForeCast</li>
+            </ol>
+            <hr/>
+            </div>
+           
+       )
+   }
+   const Certifications=()=>
+   {
+       return(
+           <div>
+            <h3>WorkShops and Certifications</h3>
+           <ol>
+            <li>Redhat Certified System Administrator</li>
+            <li>Attended 10 days WorkShop on Android Studio</li>
+            <li>Coursera Python Specilization</li>
+            <li>Udemy Web Development Certificate</li>
+            </ol>
+            <hr/>
+            </div>
+           
+       )
+   }
+   const Declaration=()=>
+   {
+       return(
+            <div>
+                <h3>Declaration</h3>
+                <p>I hearBy Declare All the information provided is True of MY knowledge</p>
+            </div>
+         
+       )
+   }
+        const Main=()=>
+        {
+            return(
+                <div class="container">
+                    <Title name="G Chaitanya Naidu"/>
+                    <Addressbar address="N. Damen Avenue, Chicago 99999" phone="999-999-9999" email="hello@kickresume.com" website="www.kickresume.com" />
+                    <CarrerObjective  text="Seeking a challenging role at a reputed IT organisation to utilize my engineering skills that can contribute to the company’s growth as well as enhance my knowledge by exploring new things."/>
+                    <Education/>
+                    <Skills/>
+                    <Projects/>
+                    <Certifications/>
+                    <Declaration/>
+
+                </div>
+            )
+        }
+
+
+    ReactDOM.render(<Main />, root);
+    </script>
+</body>
+</html>

@@ -22,6 +22,14 @@
     <script type="text/babel">
     const root=document.getElementById("main");
     const Title = ({name})=><h1 class="text-center">{name}</h1>
+
+    const Heading=({name})=><h3>{name}</h3>
+
+    const TableHeader=({data})=><th>{data}</th>
+
+    const TableData=({data})=><td>{data}</td>
+
+    const Paragraph=({text})=><p>{text}</p>
     
     const Addressbar = ({address,phone,email,website})=>
     {
@@ -42,7 +50,9 @@
    {
        return(
            <div class="container">
-                <div class="row"><h3>Carrer Objective</h3></div>
+                <div class="row">
+                    <Heading name="Carrer Objective"/>
+                </div>
                  <div class="row">{text}</div>
                  <hr/>
             </div>
@@ -51,36 +61,36 @@
    const Education=()=>
    {
        return(
-        <div class="container">
-        <h3>Education Qualifications</h3>
+        <div>
+            <Heading name="Education Qualification"/>
         <table class="table table-dark">
         <thead>
             <tr>
-                <th>Qualification</th>
-                <th>College name</th>
-                <th>Year Of Passing</th>
-                <th>Percentage</th>
+                <TableHeader data="Qualification"/>
+                <TableHeader data="College Name"/>
+                <TableHeader data="Year of Passing"/>
+                <TableHeader data="Percentage"/>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>B.E</td>
-                <td>Sathyabama University</td>
-                <td>2020</td>
-                <td>85.9</td>
+                <TableData data="B.E"/>
+                <TableData data="Sathyabama University"/>
+                <TableData data="2020"/>
+                <TableData data="85.9"/>
             </tr>
             <tr>
-                <td>Intermediate</td>
-                <td>MPC</td>
-                <td>2016</td>
-                <td>96.6</td>
+                <TableData data="Intermediate"/>
+                <TableData data="Sri Chaitanya Junior College"/>
+                <TableData data="2016"/>
+                <TableData data="96.6"/>
                 
             </tr>
             <tr>
-                <td>Primary School</td>
-                <td>General</td>
-                <td>2014</td>
-                <td>97</td>
+                <TableData data="Primary School"/>
+                <TableData data="Ravindra Vidhya Nikethan"/>
+                <TableData data="2014"/>
+                <TableData data="97"/>
             </tr>
         </tbody>
         </table>
@@ -93,7 +103,7 @@
    {
        return(
            <div>
-            <h3>Skills</h3>
+            <Heading name="Skills"/>
            <ul>
             <li>C</li>
             <li>JavaScript</li>
@@ -111,7 +121,7 @@
    {
        return(
            <div>
-            <h3>Projects</h3>
+            <Heading name="Projects"/>
            <ol>
             <li>Sign Language Application</li>
             <li>Text Encoder and Decoder</li>
@@ -126,7 +136,7 @@
    {
        return(
            <div>
-            <h3>WorkShops and Certifications</h3>
+            <Heading name="WorkShops and Certifications"/>
            <ol>
             <li>Redhat Certified System Administrator</li>
             <li>Attended 10 days WorkShop on Android Studio</li>
@@ -142,8 +152,8 @@
    {
        return(
             <div>
-                <h3>Declaration</h3>
-                <p>I hearBy Declare All the information provided is True of MY knowledge</p>
+            <Heading name="Declaration"/>
+            < Paragraph text="I hearBy Declare All the information provided is True of MY knowledge"/>
             </div>
          
        )
